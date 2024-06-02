@@ -1,0 +1,143 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: auto; /* Permitir rolagem vertical */
+}
+
+/* Estilo para o body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 18%; /* Ajustar para centralizar a página */
+}
+
+/* Contêiner principal da aplicação */
+#app {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    min-height: 100vh; /* Garantir que ocupe toda a altura da janela */
+    padding-top: 20px; /* Adicionar espaçamento no topo */
+    box-sizing: border-box;
+}
+
+.personagem {
+    background-color: rgb(236, 122, 15);
+    border: 2px solid rgb(7, 6, 4);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 200px;
+    margin-left: 200px; /* Ajuste conforme necessário para o espaçamento desejado */
+}
+
+
+
+/* Estilo para as ações */
+.acoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+/* Estilo para os botões */
+button {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #424242;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(0px);
+}
+
+/* Estilo para a barra de vida */
+.barra-vida {
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+.verde {
+    background-color: rgb(42, 206, 24);
+}
+
+.amarela {
+    background-color: rgb(227, 227, 25);
+}
+
+.vermelha {
+    background-color: rgb(249, 7, 7);
+}
+
+/* Estilo para a sprite */
+.sprite {
+    height: 140px;
+    background-color: #ddd;
+    background-size: cover;
+}
+
+/* Estilo para o log */
+.log {
+    width: 300px;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 290px; 
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.log ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.log li {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.log li:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.log li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.log h2 {
+    color: #fff;
+}

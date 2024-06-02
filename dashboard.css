@@ -1,0 +1,124 @@
+/* Estilos gerais para o body e html */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: auto; /* Permitir rolagem vertical */
+}
+
+/* Estilo para o contêiner principal */
+.container {
+    display: flex;
+    flex-direction: column; /* Para alinhar os elementos verticalmente */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+h1 {
+    margin-top: 0; /* Remover margem superior padrão */
+    color: #ffffff; /* Cor branca para o título */
+    text-align: center; /* Centralizar o título */
+    font-size: 48px; /* Tamanho da fonte aumentado */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    padding: 10px 20px; /* Adicionando algum espaço interno */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilo para o conteúdo principal */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 20px;
+    background-color: rgba(14, 1, 1, 0.7); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Estilo para o contêiner dos personagens */
+.personagens {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinhar à esquerda */
+    width: 50%; /* Reduzir a largura */
+    padding-right: 20px; /* Espaço à direita para a barra de ações */
+}
+
+/* Estilo para cada personagem */
+.personagem {
+    background-color: rgb(236, 122, 15);
+    border: 2px solid rgb(7, 6, 4);
+    border-radius: 5px;
+    padding: 10px;
+    width: 80%; /* Reduzir a largura */
+    margin-bottom: 20px;
+}
+
+/* Estilo para os textos dos personagens */
+.personagem h2 {
+    margin: 0; /* Remover margem interna */
+    color: #ffffff;
+}
+
+/* Estilo para os textos das vidas dos personagens */
+.personagem div {
+    margin-bottom: 10px;
+    color: #ffffff; /* Cor branca para o texto das vidas */
+}
+
+/* Estilo para o log */
+.log {
+    position: absolute;
+    right: 10px;
+    top: 50%; /* Centralizar verticalmente */
+    transform: translateY(-50%); /* Ajustar a posição para centralizar */
+    width: 30%; /* Ajuste a largura conforme necessário */
+    max-height: 90%;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.log ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.log li {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.log li:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.log li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.log h2 {
+    color: #fff;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}

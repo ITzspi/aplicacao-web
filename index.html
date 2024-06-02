@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo - Herói x Vilão</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+<div id="app">
+    <div class="personagens-container">
+        <div class="personagem">
+            <div class="barra-vida" :class="{'verde': heroi.vida >= 80, 'amarela': heroi.vida >= 30 && heroi.vida < 80, 'vermelha': heroi.vida < 30}">{{ heroi.vida }}</div>
+            <div class="sprite" style="background-image: url('malenia.jpg');"></div>
+            <h1>Malenia</h1>
+            <div class="acoes">
+                <button @click="atacar(true)" :disabled="gameOver">Atacar</button>
+                <button @click="defender(true)" :disabled="gameOver">Defender</button>
+                <button @click="usarEstus(true)" :disabled="gameOver || estusCooldown">Tomar Estus</button>
+                <button @click="esquivar(true)" :disabled="gameOver">Esquivar</button>
+            </div>
+        </div>
+        <div class="personagem" v-if="vilao.vida > 0">
+            <div class="barra-vida" :class="{'verde': vilao.vida >= 80, 'amarela': vilao.vida >= 30 && vilao.vida < 80, 'vermelha': vilao.vida < 30}">{{ vilao.vida }}</div>
+            <div class="sprite" style="background-image: url('General Radahn.jpg');"></div>
+            <h1>General Radahn</h1>
+            <div class="acoes">
+                <button style="display:none">Atacar</button>
+                <button style="display:none">Defender</button>
+                <button style="display:none">Usar Poção</button>
+                <button style="display:none">Esquivar</button>
+            </div>
+            <button onclick="window.open('dashboard.html','_blank')">Dashboard</button>
+        </div>
+    </div>
+    <div class="log">
+        <h2>Ações</h2>
+        <ul>
+            <li v-for="(log, index) in logAcoes.slice().reverse()" :key="index">{{ log }}</li>
+        </ul>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

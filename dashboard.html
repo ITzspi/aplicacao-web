@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Jogo Herói e Vilão</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="dashboardApp" class="container">
+        <h1>Dashboard</h1>
+        <div class="personagens">
+            <div class="personagem">
+                <h2>Malenia</h2>
+                <div>Vida: {{ heroiVida }}%</div>
+                <div class="log">
+                    <h2>Ações</h2>
+                    <ul>
+                        <li v-for="(log, index) in logAcoes.slice().reverse()" :key="index">{{ log }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="personagem">
+                <h2>General Radahn</h2>
+                <div>Vida: {{ vilaoVida }}%</div>
+            </div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
