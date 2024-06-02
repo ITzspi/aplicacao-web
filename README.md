@@ -26,17 +26,15 @@ Cada ação realizada no jogo gera um registro que pode ser visualizado no dashb
 Dashboard Interativo: Exibição de dados gerados durante o jogo, incluindo ações e estado dos personagens.
 ![image](https://github.com/ITzspi/aplicacao-web/assets/141787351/8656621f-836b-4ac3-9ecd-37b4b91c0c0b)
 
-# 🛠️ Tecnologias Utilizadas
-
-- Frontend: VueJS
-- Backend: Node.js (Express)
-- Banco de Dados: Azure SQL Database
-- Autenticação: JWT (JSON Web Tokens)
-
 # 🔒 Banco de Dados
 
 Aconteceu um problema na azure onde acabou meus créditos por algum motivo que não sei, sendo que nem tinha utilizado ele ainda
 ![image](https://github.com/ITzspi/aplicacao-web/assets/141787351/908df10f-583e-40c8-ae4f-a43e569d9f34)
 Ai queria ver o que fazer para entregar meu trabalho completo com um Banco
 
+# 🛠️ Tecnologias Utilizadas
 
+- Frontend: VueJS
+- Backend: Node.js (Express)
+- Banco de Dados: Azure SQL Database
+- Autenticação: JWT (JSON Web Tokens)
